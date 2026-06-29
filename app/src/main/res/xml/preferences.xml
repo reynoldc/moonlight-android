@@ -252,6 +252,11 @@
             android:title="@string/title_checkbox_absolute_mouse_mode"
             android:summary="@string/summary_checkbox_absolute_mouse_mode"
             android:defaultValue="false" />
+        <CheckBoxPreference
+            android:key="checkbox_xiaomi_touchpad_compat"
+            android:title="小米平板触摸板兼容模式"
+            android:summary="为小米/红米/Poco 平板保留系统触摸板手势，修复双指滚动、双指右键等操作。关闭后恢复 Moonlight 原生鼠标捕获。"
+            android:defaultValue="true" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/category_on_screen_controls_settings"
         android:key="category_onscreen_controls">

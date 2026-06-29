@@ -63,6 +63,7 @@ public class PreferenceConfiguration {
     private static final String LATENCY_TOAST_PREF_STRING = "checkbox_enable_post_stream_toast";
     private static final String FRAME_PACING_PREF_STRING = "frame_pacing";
     private static final String ABSOLUTE_MOUSE_MODE_PREF_STRING = "checkbox_absolute_mouse_mode";
+    private static final String XIAOMI_TOUCHPAD_COMPAT_PREF_STRING = "checkbox_xiaomi_touchpad_compat";
     private static final String ENABLE_AUDIO_FX_PREF_STRING = "checkbox_enable_audiofx";
     private static final String ENABLE_AUDIO_HAPTICS_PREF_STRING = "checkbox_enable_audio_haptics";
     private static final String AUDIO_HAPTICS_OUTPUT_TARGET_PREF_STRING = "list_audio_haptics_output_target";
@@ -128,6 +129,7 @@ public class PreferenceConfiguration {
     private static final boolean DEFAULT_LATENCY_TOAST = false;
     private static final String DEFAULT_FRAME_PACING = "latency";
     private static final boolean DEFAULT_ABSOLUTE_MOUSE_MODE = false;
+    private static final boolean DEFAULT_XIAOMI_TOUCHPAD_COMPAT = true;
     private static final boolean DEFAULT_ENABLE_AUDIO_FX = false;
     private static final boolean DEFAULT_ENABLE_AUDIO_HAPTICS = false;
     private static final String DEFAULT_AUDIO_HAPTICS_OUTPUT_TARGET = "phone";
@@ -264,6 +266,7 @@ public class PreferenceConfiguration {
     public MoonBridge.AudioConfiguration audioConfiguration;
     public int framePacing;
     public boolean absoluteMouseMode;
+    public boolean enableXiaomiTouchpadCompat;
     public boolean enableAudioFx;
     public boolean enableAudioHaptics;
     public String audioHapticsOutputTarget;
@@ -930,6 +933,9 @@ public class PreferenceConfiguration {
         config.enableAccessibilityShowLog=prefs.getBoolean("checkbox_enable_accessibility_show_log",false);
 
         config.enableGameMenuNew=prefs.getBoolean("checkbox_enable_game_menu_new",true);
+
+        config.enableXiaomiTouchpadCompat = prefs.getBoolean(XIAOMI_TOUCHPAD_COMPAT_PREF_STRING,
+                DEFAULT_XIAOMI_TOUCHPAD_COMPAT);
 
         config.enableScreenOnAuto=prefs.getInt("enable_screen_on_auto",0);
 
